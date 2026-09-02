@@ -89,9 +89,9 @@ document.getElementById('c-panels').innerHTML = Array.from({length: 18}, (_, i) 
   return `<img src="${A[k]}" ${ar(k)} loading="lazy" decoding="async" alt="8월의 바다를 식탁으로 ${i + 1}컷">`;
 }).join('');
 
-const C = [{"no": 106, "t": "8월의 바다를 식탁으로", "cur": true}, {"no": 105, "t": "방구석에서 떠나는 세계 빙수 여행", "cur": false}, {"no": 104, "t": "남는 채소, 다 모여!", "cur": false}];
+const C = [{"no": 106, "t": "8월의 바다를 식탁으로", "cur": true, "go": "ep106.html"}, {"no": 105, "t": "방구석에서 떠나는 세계 빙수 여행", "cur": false, "go": ""}, {"no": 104, "t": "남는 채소, 다 모여!", "cur": false, "go": ""}];
 document.getElementById('c-items').innerHTML = C.map(e => `
-<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>
   <span class="d-eprow__t">${esc(e.t)}</span>
   <img loading="lazy" decoding="async" src="${A['t' + e.no]}" alt="">

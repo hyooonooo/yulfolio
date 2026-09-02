@@ -88,9 +88,9 @@ document.getElementById('c-panels').innerHTML = Array.from({length: 14}, (_, i) 
   return `<img src="${A[k]}" ${ar(k)} loading="lazy" decoding="async" alt="무화과 어디까지 무봤나 ${i + 1}컷">`;
 }).join('');
 
-const C = [{"no": 39, "t": "홍합으로 만드는 맛있는 조합", "cur": false}, {"no": 38, "t": "정성 가득! 이색 뇨키 한 끼", "cur": false}, {"no": 37, "t": "무화과 어디까지 무봤나", "cur": true}, {"no": 36, "t": "광어 요리, 얼마나 맛있게요?", "cur": false}, {"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false}];
+const C = [{"no": 39, "t": "홍합으로 만드는 맛있는 조합", "cur": false, "go": ""}, {"no": 38, "t": "정성 가득! 이색 뇨키 한 끼", "cur": false, "go": ""}, {"no": 37, "t": "무화과 어디까지 무봤나", "cur": true, "go": "ep37.html"}, {"no": 36, "t": "광어 요리, 얼마나 맛있게요?", "cur": false, "go": ""}, {"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false, "go": "ep35.html"}];
 document.getElementById('c-items').innerHTML = C.map(e => `
-<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>
   <span class="d-eprow__t">${esc(e.t)}</span>
   <img loading="lazy" decoding="async" src="${A['t' + e.no]}" alt="">

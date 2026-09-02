@@ -33,3 +33,18 @@ document.addEventListener('click', ev => {
   const el = ev.target.closest('[data-href]');
   if (el) location.href = el.dataset.href;
 });
+
+const BUILT = new Set([4, 13, 19, 30, 35, 37, 41, 49, 59, 61, 64, 65, 68, 70, 80, 82, 83, 91, 92, 96, 98, 106]);
+function offify() {
+  document.querySelectorAll('.d-eprow').forEach(b => {
+    const no = Number((b.querySelector('.d-eprow__no') || {}).textContent);
+    if (BUILT.has(no)) return;
+    b.classList.add('is-off');
+    b.disabled = true;
+    b.setAttribute('aria-disabled', 'true');
+    if (!/준비 중/.test(b.getAttribute('aria-label') || '')) {
+      b.setAttribute('aria-label', (b.getAttribute('aria-label') || '') + ' (준비 중)');
+    }
+  });
+}
+addEventListener('load', offify);

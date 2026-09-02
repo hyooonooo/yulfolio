@@ -100,7 +100,10 @@ const KT_ALT = [
   '깨와 삶은 달걀을 곁들이면 키토 떡볶이 완성',
   '키토 김밥 재료',
   '계란물을 부어 지단을 부친다',
-  '당근과 오이를 채 썰어 볶는다'
+  '당근과 오이를 채 썰어 볶는다',
+  '지단을 돌돌 말아 채를 썬 후 김 위에 올린다',
+  '먹기 좋은 크기로 썰면 키토 김밥 완성',
+  '운동하면서 죄책감 없이 먹을 수 있는 키토 분식'
 ];
 document.getElementById('kt-panels').innerHTML = KT_ALT
   .map((alt, i) => `<img loading="lazy" decoding="async" ${ar('k_p' + (i + 1))} src="${A['k_p' + (i + 1)]}" alt="${esc(alt)}">`).join('');

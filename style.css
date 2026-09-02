@@ -338,6 +338,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .d-eprow{display:flex;align-items:center;gap:16px;width:100%;min-height:116px;padding:14px 32px 14px 20px;text-align:left;transition:background .12s ease}
 .d-eprow:active{background:#e6e8ee}
 .d-eprow[aria-current="true"]{background:var(--band)}
+.d-eprow.is-off{cursor:default}
+.d-eprow.is-off:active{background:transparent}
+.d-eprow.is-off .d-eprow__no,.d-eprow.is-off .d-eprow__t{color:var(--fai)}
+.d-eprow.is-off img{opacity:.4;filter:grayscale(1)}
 .d-eprow__no{flex:none;width:28px;text-align:center;font-size:15px;color:var(--mut)}
 .d-eprow__t{flex:1;min-width:0;font-size:15px;font-weight:600;line-height:1.4;color:var(--ink)}
 .d-eprow img{flex:none;width:56px;height:56px;border-radius:14px;object-fit:cover;background:#e2e8f0}
