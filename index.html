@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Tasty SOLution] — 즐겁고 특별한 레시피</title>
+<meta name="description" content="신한 SOL pay [Tasty SOLution] 콘텐츠 프로토타입">
+<link rel="preload" href="assets/fonts/p700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage">
+  <div class="phone">
+    <span class="phone__btn phone__btn--silent" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--volup" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--voldown" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--power" aria-hidden="true"></span>
+
+    <div class="phone__screen">
+      <span class="phone__notch" aria-hidden="true"></span>
+      <span class="phone__home" aria-hidden="true"></span>
+
+      <div class="scroll" id="scroller">
+        <!-- ============ SCREEN 1 : [Tasty SOLution] 시리즈 ============ -->
+        <main class="screen d is-active" id="screen-list" aria-label="[Tasty SOLution] 시리즈 화면" tabindex="-1">
+          <header class="appbar" data-appbar>
+            <div class="statusbar d-status">
+              <span class="statusbar__time">10:41</span>
+              <span class="statusbar__icons">
+                <img class="ico-signal" alt="" data-a="s2_signal_d">
+                <img class="ico-wifi" alt="" data-a="s2_wifi_d">
+                <img class="ico-battery" alt="" data-a="s2_battery_d">
+              </span>
+            </div>
+            <div class="navbar d-nav">
+              <button type="button" class="d-navbtn" aria-label="뒤로 가기"><img alt="" data-a="s2_arrow_d"></button>
+              <p class="sr-title appbar__title">즐겁고 특별한 레시피</p>
+              <button type="button" class="d-navbtn" aria-label="공유하기"><img alt="" data-a="s2_share_d"></button>
+            </div>
+          </header>
+
+          <div class="sr-hero" data-hero>
+            <img class="sr-hero__bg" alt="" data-a="s_hero">
+            <div class="sr-hero__ov"></div>
+            <div class="sr-hero__wrap">
+              <img class="sr-hero__photo" alt="[Tasty SOLution] 시리즈 대표 이미지" data-a="s_hero">
+            </div>
+          </div>
+
+          <div class="d-series sr-intro">
+            <span class="badge"><span class="badge__star"><img alt="" data-a="s2_star1"></span>시리즈</span>
+            <p class="d-series__title">[Tasty SOLution]</p>
+            <p class="d-series__desc">간단하지만 특별한, 일상 속에서 즐길 수 있는 센스 있는 레시피를 알려드려요.</p>
+          </div>
+
+          <section class="d-eplist sr-list" aria-labelledby="sr-count">
+            <p class="d-h sr-count" id="sr-count">총 106화</p>
+            <div class="d-rule"></div>
+            <ul class="d-eplist__items" id="sr-items"></ul>
+            <div class="d-expandwrap">
+              <button type="button" class="d-expand" id="sr-expand" aria-expanded="false" aria-controls="sr-items"><span class="d-plus" aria-hidden="true"></span>펼쳐보기</button>
+            </div>
+          </section>
+
+          <div class="d-band"></div>
+
+          <section class="sr-other" aria-labelledby="sr-other-h">
+            <button type="button" class="sr-other__head" id="sr-other-h">다른 비금융 시리즈<span class="d-chev" aria-hidden="true"></span></button>
+            <ul class="sr-other__list">
+              <li><button type="button" class="sr-card">
+                <img alt="" data-a="other1">
+                <span class="sr-card__body">
+                  <span class="sr-card__meta"><img alt="" data-a="s2_star">시리즈 · 총 21화</span>
+                  <span class="sr-card__title">[Healthy SOLution]</span>
+                </span>
+              </button></li>
+            </ul>
+          </section>
+        </main>
+
+
+      </div>
+    </div>
+  </div>
+  <p class="hint">실제 앱 화면 기준 프로토타입 — <code>펼쳐보기</code>로 106화 전체가 열립니다.</p>
+</div>
+
+<script src="assets/img/map.js"></script>
+<script src="app.js"></script>
+<script>
+/* ---------- [Tasty SOLution] 106화 ---------- */
+const EP = [
+  [106,'8월의 바다를 식탁으로'],[105,'방구석에서 떠나는 세계 빙수 여행'],[104,'남는 채소, 다 모여!'],
+  [103,'채식으로 건강한 여름나기'],[102,'건강한 여름 간식! 그릭 요거트 바크 만들기'],[101,'왔다, K-음료의 계절'],
+  [100,'달달한 이색 화채 만들어볼까'],[99,'복날 음식 밸런스게임'],[98,'여름을 부탁해, 슈퍼 푸드!'],
+  [97,'여름에 빚는, 우리의 전통 술'],[96,'참외, 왜 안 먹어?'],[95,'참 맛있는 참외 밥상'],
+  [94,'도시락에도 봄이 왔나 봄'],[93,'그릇까지 냠냠'],[92,'남은 식빵의 반전 매력'],
+  [91,'한입에 즐기는 스페인의 맛'],[90,'포르투갈 문어밥 아로스 드 폴부'],[89,'멍게로 입맛 UP!'],
+  [88,'두릅으로 에너지 UP!'],[87,'봄날의 홈카페'],[86,'내가 만든 꽃 요리, 봄을 위해 구웠지'],
+  [85,'쫄면의 재발견'],[84,'벚꽃 구경도 식후경!'],[83,'봄맛 과몰입 중!'],
+  [82,'몸이 산뜻해지는 봄의 사찰음식'],[81,'차지키 소스를 곁들인 그릭 수블라키'],[80,'봄 향기 가득! 냉이 파스타'],
+  [79,'누가 왕이 될 상인가'],[78,'오늘 밥 주인공은 나야 나!'],[77,'빵에 발라 먹어요 매콤 쌉쌀하게'],
+  [76,'나의 헝가리식 비프 스튜'],[75,'남은 음식을 부탁해! 명절 메뉴 활용법'],[74,'원조 쫀쿠? 이건 약과지.'],
+  [73,'찬밥의 변신은 무죄'],[72,'만들어 선물할까, 술 초콜릿'],[71,'달콤한 폭탄이 팡팡, 코코아밤 만들기'],
+  [70,'찬바람 불 때 삿포로 수프카레'],[69,'한 그릇으로 가뿐하게'],[68,'방 콕! 남국의 셰프'],
+  [67,'황금빛 샤프란과 K 감칠맛'],[66,'향긋한 겨울의 전령사 유자 활용법'],[65,'운동할 땐 간식도 건강하게!'],
+  [64,'겨울을 굽는 시간 크리스마스 버터 쿠키 레시피'],[63,'팥 들었슈!'],[62,'까먹기만 하기엔 아까워! 귤 활용 디저트 레시피'],
+  [61,'잼보다 더 향긋한 시나몬 사과 콩포트'],[60,'자연이 포개 놓은 감칠맛'],[59,'달콤한 늦가을 맛! 시나몬롤 만들기'],
+  [58,'탱글탱글 제철 굴 요리'],[57,'가을엔 감을 먹자'],[56,'달콤하고 진한 3층의 매력, 나나이모바(Nanaimo Bars)'],
+  [55,'제철 대하 이렇게도 먹어 보새우'],[54,'한 입에 담은 달콤한 전통, 약밥 만들기'],[53,'왕 크니까 왕 맛있다! 가을 제철 대하'],
+  [52,'제철 배로 만드는 건강 디저트'],[51,'명절의 꽃!'],[50,'우리 집이 전 맛집'],
+  [49,'걸어 다니면서 먹는 워킹 타코 꿀조합'],[48,'애슐땡 피쉬 스테이크, 직접 만들어 먹자!'],[47,'냉면 육수 붐은 온다'],
+  [46,'물복 vs 딱복? 복숭아는 다 맛있다!'],[45,'돌아온 초당옥수수의 계절'],[44,'후추의 맛'],
+  [43,'타우린&단백질 가득! 파스타 한 접시'],[42,'담백하고 고소한 바다 한 솥'],[41,'참새처럼 귀여워! 매작과 만들기'],
+  [40,'동글동글 귀여운 만두가 퐁당'],[39,'홍합으로 만드는 맛있는 조합'],[38,'정성 가득! 이색 뇨키 한 끼'],
+  [37,'무화과 어디까지 무봤나'],[36,'광어 요리, 얼마나 맛있게요?'],[35,'달디달고 다디단 밤 디저트'],
+  [34,'자기 관리 끝판왕의 식단 따라잡기'],[33,'올라, 에스파냐! 지중해의 낭만 타파스'],[32,'간편한 여름 보양식 솥밥'],
+  [31,'여름방학, 10분 완성!'],[30,'여름밤, 홈메이드 막걸리와 함께'],[29,'이토록 맛있는 수수수박껍질...!'],
+  [28,'바다의 산삼, 전복으로 스태미나 100% 충전'],[27,'돌아서면 생각나는 바로 그 시골 밥상'],[26,'여름 산삼, 민어'],
+  [25,'식탁 위에 핀 영양 만점 노란 꽃'],[24,'보양식 밸런스 게임 뜨겁게? 혹은 차갑게?'],[23,'장어 기운 뿜뿜'],
+  [22,'오븐 없이도 가능! 초간단 타르트 만들기'],[21,'꽃게가 활짝 피었습니다'],[20,'집에서 즐기는 만찬!'],
+  [19,'분식 못 잃어! 다이어터를 위한 레시피'],[18,'내돈내만 이유식!'],[17,'보약 대신 챙기는 봄 주꾸미'],
+  [16,'식탁 위에 피어난 봄'],[15,'마지막 살 오른 꼬막의 기특한 맛'],[14,'초간단 식혜 만들기'],
+  [13,'호랑이도 반한 겨울별미, 수수부꾸미'],[12,'콩으로 메주를 쑤는 것임? 두부도?'],[11,'녹색 실을 닮은 갯벌의 보물'],
+  [10,'잘 봐, 더덕과 우엉의 싸움이다'],[9,'삼시 세끼도 가능! 삶은 달걀을 특별하게'],[8,'깔끔한 맛! 비건 김치 레시피 3'],
+  [7,'별들의 꿀맛 레시피'],[6,'건강 관리도 즐겁게, 헬시 플레저 레시피'],[5,'여름엔 연잎! 다 이유가 있다'],
+  [4,'집에서 빙수 만들기, 이게 되네?'],[3,'조선 실학자들의 간식보감'],[2,'혼자서도 맛있게'],
+  [1,'먹스타그래머의 플러스알파 래시피']
+];
+
+const GO = {4:'ep4.html', 13:'ep13.html', 19:'ep19.html', 30:'ep30.html', 61:'ep61.html', 65:'ep65.html'};
+const items = document.getElementById('sr-items');
+items.className = 'd-eplist__items is-collapsed';
+items.innerHTML = EP.map(([no, t]) => `
+<li><button type="button" class="d-eprow"${GO[no] ? ` data-href="${GO[no]}"` : ''} aria-label="${no}화 ${esc(t)}">
+  <span class="d-eprow__no">${no}</span>
+  <span class="d-eprow__t">${esc(t)}</span>
+  <img loading="lazy" decoding="async" ${ar('t' + no)} src="${A['t' + no]}" alt="">
+</button></li>`).join('');
+
+const srExpand = document.getElementById('sr-expand');
+srExpand.addEventListener('click', ev => {
+  const on = ev.currentTarget.getAttribute('aria-expanded') === 'true';
+  ev.currentTarget.setAttribute('aria-expanded', String(!on));
+  ev.currentTarget.lastChild.textContent = on ? '펼쳐보기' : '접기';
+  ev.currentTarget.querySelector('.d-plus').classList.toggle('is-minus', !on);
+  items.classList.toggle('is-collapsed', on);
+  if (on) items.scrollIntoView({block:'start'});
+});
+
+
+
+relayout();
+</script>
+</body>
+</html>

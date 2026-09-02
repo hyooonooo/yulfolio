@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4화 집에서 빙수 만들기, 이게 되네? — [Tasty SOLution]</title>
+<meta name="description" content="신한 SOL pay [Tasty SOLution] 콘텐츠 프로토타입">
+<link rel="preload" href="assets/fonts/p700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage">
+  <div class="phone">
+    <span class="phone__btn phone__btn--silent" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--volup" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--voldown" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--power" aria-hidden="true"></span>
+
+    <div class="phone__screen">
+      <span class="phone__notch" aria-hidden="true"></span>
+      <span class="phone__home" aria-hidden="true"></span>
+
+      <div class="scroll" id="scroller">
+<!-- ============ SCREEN 2 : 집에서 빙수 만들기, 이게 되네? ============ -->
+        <main class="screen d is-active" id="screen-detail" aria-label="집에서 빙수 만들기, 이게 되네? 상세 화면" tabindex="-1">
+          <header class="appbar" data-appbar>
+            <div class="statusbar d-status">
+              <span class="statusbar__time">10:39</span>
+              <span class="statusbar__icons">
+                <img class="ico-signal" alt="" data-a="s2_signal_d">
+                <img class="ico-wifi" alt="" data-a="s2_wifi_d">
+                <img class="ico-battery" alt="" data-a="s2_battery_d">
+              </span>
+            </div>
+            <div class="navbar d-nav">
+              <button type="button" class="d-navbtn" aria-label="시리즈 목록으로 돌아가기" data-href="index.html"><img alt="" data-a="s2_arrow_d"></button>
+              <button type="button" class="d-navbtn" aria-label="공유하기"><img alt="" data-a="s2_share_d"></button>
+            </div>
+          </header>
+
+          <div class="d-hero" data-hero><img alt="세 가지 홈메이드 빙수" data-a="hero_top"></div>
+
+          <div class="d-intro">
+            <span class="badge"><span class="badge__star"><img alt="" data-a="s2_star1"></span>시리즈</span>
+            <h1 class="d-title">집에서 빙수 만들기,<br>이게 되네?</h1>
+            <p class="d-sub">쉽게 만들어 시원하게 즐기는 홈메이드 빙수</p>
+            <p class="d-lead">내리쬐는 햇볕과 찌는듯한 더위에 자꾸만 생각나는 빙수. 단팥과 쫀득한 인절미가 어우러지는 팥빙수부터 달콤 상큼한 과일빙수, 부드러운 우유빙수까지 다양한 맛과 모양으로 여름철 활력을 주는 간식이다.</p>
+            <p class="d-lead">각기 다른 매력을 가진 빙수를 집에서 즐겨보자. ‘요알못(요리를 알지 못하는 사람)’도 즐겁게 도전해 볼 수 있는, 간단한 재료들로 뚝딱 만들 수 있는 홈빙 레시피 3개를 소개한다.</p>
+          </div>
+
+          <div class="d-rule"></div>
+          <div id="d-recipes"></div>
+
+          <p class="d-date">작성일 2023년 6월</p>
+          <div class="d-rule"></div>
+          <div class="d-band"></div>
+
+          <div class="d-series">
+            <span class="badge"><span class="badge__star"><img alt="" data-a="s2_star1"></span>시리즈</span>
+            <p class="d-series__title">[Tasty SOLution]</p>
+            <p class="d-series__desc">간단하지만 특별한, 일상 속에서 즐길 수 있는 센스 있는 레시피를 알려드려요.</p>
+          </div>
+
+          <section class="d-eplist" aria-labelledby="d-count">
+            <div class="d-eplist__head">
+              <p class="d-eplist__count" id="d-count">총 106화</p>
+              <button type="button" class="d-eplist__all" data-href="index.html">전체보기<span class="d-chev" aria-hidden="true"></span></button>
+            </div>
+            <div class="d-rule"></div>
+            <ul class="d-eplist__items" id="d-items"></ul>
+            <div class="d-expandwrap"><button type="button" class="d-expand" id="d-expand" aria-expanded="false"><span class="d-plus" aria-hidden="true"></span>펼쳐보기</button></div>
+          </section>
+
+          <div class="d-band"></div>
+
+          <section class="d-react" aria-labelledby="d-react-cap">
+            <p class="d-h" id="d-react-cap">이 콘텐츠에 반응을 남겨보세요.</p>
+            <div class="d-react__row" id="d-react-row"></div>
+          </section>
+
+          <div class="d-band"></div>
+
+          <section class="d-recos" aria-labelledby="d-recos-h">
+            <p class="d-h" id="d-recos-h">지금 많은 분들이 보고 있어요</p>
+            <ul class="d-recos__list" id="d-recos-list"></ul>
+          </section>
+
+          <div class="d-toolbar">
+            <button type="button" class="d-tool" aria-label="좋아요"><img alt="" data-a="s2_heart_d"></button>
+            <button type="button" class="d-tool" aria-label="저장하기"><img alt="" data-a="s2_bookmark_d"></button>
+          </div>
+        </main>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="assets/img/map.js"></script>
+<script src="app.js"></script>
+<script>
+
+/* ---------- 레시피 3종 (실제 앱 콘텐츠) ---------- */
+const R = [
+  {
+    title:'고소하고 건강한<br>두유빙수',
+    alt:'고소하고 건강한 두유빙수',
+    ing:'두유, 약과, 연유, 초콜릿, 견과류, 시리얼',
+    how:[
+      '팩 두유의 날개 부분을 모두 펴고 납작하게 만들어 팩째로 얼린다.',
+      '얼린 두유를 두드려 잘게 부순 후 빙수 볼에 담고 취향에 맞게 연유를 뿌린다.',
+      '두유 빙수 위에 약과를 올린다.',
+      '초콜릿과 견과류 등 취향에 맞는 토핑을 올려 마무리한다.'
+    ]
+  },
+  {
+    title:'상큼한 과즙이 살아 있는<br>딸기빙수',
+    alt:'상큼한 과즙이 살아 있는 딸기빙수',
+    ing:'우유, 딸기, 연유, 설탕 시럽, 시리얼, 젤리, 찹쌀떡',
+    how:[
+      '지퍼백에 담아 얼린 우유를 잘게 부수어 빙수 볼에 담는다.',
+      '딸기를 씻어 시럽용, 장식용을 나누어 준비한다.',
+      '잘게 자른 시럽용 딸기에 설탕 시럽을 넣고 으깨며 섞어준다.',
+      '연유와 딸기시럽을 가운데 넣어준다.',
+      '반으로 자른 장식용 딸기를 올린다.',
+      '시리얼과 젤리, 찹쌀떡을 얹어 마무리한다.'
+    ]
+  },
+  {
+    title:'카페인이 필요한 여름날엔<br>커피빙수',
+    alt:'카페인이 필요한 여름날엔 커피빙수',
+    ing:'커피 우유, 연유, 초콜릿, 견과류, 과자',
+    how:[
+      '커피 우유를 지퍼백에 담아 얼린다.',
+      '얼린 커피 우유를 두드려 잘게 부순 후 빙수 볼에 담고 취향에 맞게 연유를 뿌린다.',
+      '초콜릿과 과자, 견과류를 빙수 위에 올린다.',
+      '막대 과자를 꽂아 마무리한다.'
+    ]
+  }
+];
+
+document.getElementById('d-recipes').innerHTML = R.map((r, i) => {
+  const n = i + 1;
+  return `
+<section class="d-recipe" aria-labelledby="d-recipe-${i}">
+  <img class="d-rhero" loading="lazy" decoding="async" ${ar('r'+n+'_hero')} src="${A['r'+n+'_hero']}" alt="${esc(r.alt)} 완성 사진">
+  <h2 class="d-rtitle" id="d-recipe-${i}">${r.title}</h2>
+  <img class="d-ring" loading="lazy" decoding="async" ${ar('r'+n+'_ing')} src="${A['r'+n+'_ing']}" alt="${esc(r.alt)} 재료">
+  <h3 class="d-h">재료</h3>
+  <p class="d-ingtext">${esc(r.ing)}</p>
+  <div class="d-carousel">
+    <div class="d-carousel__track">
+      <div class="d-card"><img loading="lazy" decoding="async" ${ar('r'+n+'_step')} src="${A['r'+n+'_step']}" alt="${esc(r.alt)} 조리 과정 1"></div>
+      <div class="d-card d-card--peek"><img loading="lazy" decoding="async" ${ar('r'+n+'_peek')} src="${A['r'+n+'_peek']}" alt=""></div>
+    </div>
+    <button type="button" class="d-cbtn d-cbtn--prev" aria-label="이전 사진" disabled><i></i></button>
+    <button type="button" class="d-cbtn d-cbtn--next" aria-label="다음 사진"><i></i></button>
+  </div>
+  <div class="d-progress" role="presentation"><span></span></div>
+  <h3 class="d-h">만드는 법</h3>
+  <ol class="d-steps">
+    ${r.how.map((s, k) => `<li>${k+1}. ${esc(s)}</li>`).join('')}
+  </ol>
+</section>
+<div class="d-rule"></div>`;
+}).join('');
+
+/* ---------- 푸터 회차 목록 ---------- */
+const S2 = [
+  {no:6, t:'건강 관리도 즐겁게, 헬시 플레저 레시피', a:'ep6'},
+  {no:5, t:'여름엔 연잎! 다 이유가 있다',           a:'ep5'},
+  {no:4, t:'집에서 빙수 만들기, 이게 되네?',        a:'ep4', cur:true},
+  {no:3, t:'조선 실학자들의 간식보감',              a:'ep3'},
+  {no:2, t:'혼자서도 맛있게',                      a:'ep2'}
+];
+
+document.getElementById('d-items').innerHTML = S2.map(e => `
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+  <span class="d-eprow__no">${e.no}</span>
+  <span class="d-eprow__t">${esc(e.t)}</span>
+  <img loading="lazy" decoding="async" ${ar(e.a)} src="${A[e.a]}" alt="">
+</button></li>`).join('');
+
+/* ---------- 반응 ---------- */
+const RE = [
+  {a:'re0', l:'좋아요',  c:4},
+  {a:'re1', l:'최고',    c:8},
+  {a:'re2', l:'와우',    c:8},
+  {a:'re3', l:'유익해요', c:7},
+  {a:'re4', l:'도움돼요', c:11}
+];
+const row = document.getElementById('d-react-row');
+row.innerHTML = RE.map(r => `
+<button type="button" class="d-reaction" aria-pressed="false" aria-label="${esc(r.l)} ${r.c}개">
+  <img loading="lazy" decoding="async" ${ar(r.a)} src="${A[r.a]}" alt="">
+  <span class="d-reaction__l">${esc(r.l)}</span>
+  <span class="d-reaction__c" data-c="${r.c}">${r.c}</span>
+</button>`).join('');
+
+row.addEventListener('click', ev => {
+  const b = ev.target.closest('.d-reaction');
+  if (!b) return;
+  const on = b.getAttribute('aria-pressed') === 'true';
+  const el = b.querySelector('.d-reaction__c');
+  b.setAttribute('aria-pressed', String(!on));
+  el.textContent = on ? Number(el.dataset.c) : Number(el.dataset.c) + 1;
+});
+
+/* ---------- 추천 ---------- */
+document.getElementById('d-recos-list').innerHTML = [
+  {a:'reco1', t:'SOL &amp; English'}
+].map(r => `<li><button type="button" class="d-reco"><img loading="lazy" decoding="async" ${ar(r.a)} src="${A[r.a]}" alt=""><span>${r.t}</span></button></li>`).join('');
+
+document.getElementById('d-expand').addEventListener('click', ev => {
+  const on = ev.currentTarget.getAttribute('aria-expanded') === 'true';
+  ev.currentTarget.setAttribute('aria-expanded', String(!on));
+  ev.currentTarget.lastChild.textContent = on ? '펼쳐보기' : '접기';
+});
+
+relayout();
+</script>
+</body>
+</html>
