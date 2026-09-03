@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>디스커버 — 신한 SOL pay</title>
+<meta name="description" content="신한 SOL pay [Tasty SOLution] 콘텐츠 프로토타입">
+<link rel="preload" href="assets/fonts/p700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage">
+  <div class="phone">
+    <span class="phone__btn phone__btn--silent" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--volup" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--voldown" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--power" aria-hidden="true"></span>
+
+    <div class="phone__screen">
+      <span class="phone__notch" aria-hidden="true"></span>
+      <span class="phone__home" aria-hidden="true"></span>
+
+      <div class="scroll" id="scroller">
+
+        <section class="screen dv is-active" id="screen-dsc" tabindex="-1">
+          <header class="dv-nav">
+            <button type="button" class="dv-back" aria-label="뒤로 가기"><i aria-hidden="true"></i></button>
+            <h1 class="dv-nav__t">디스커버</h1>
+            <button type="button" class="dv-act">내 활동</button>
+            <button type="button" class="dv-search" aria-label="검색">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1"
+                   stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><path d="M15.8 15.8 21 21"/></svg>
+            </button>
+          </header>
+
+          <div class="dv-chipwrap"><button type="button" class="dv-chip">
+            <span class="dv-chip__s" aria-hidden="true">✨</span>다른 콘텐츠 추천해줘</button></div>
+
+          <nav class="dv-cats" aria-label="디스커버 카테고리">
+            <button type="button" class="dv-cat"><span class="dv-cat__i" style="--c:#f0e3a6"><span class="dv-cat__g">🎉</span></span><span class="dv-cat__n">이벤트</span></button>
+        <button type="button" class="dv-cat"><span class="dv-cat__i" style="--c:#3ea55a"><span class="dv-cat__g">💲</span></span><span class="dv-cat__n">추천 시리즈</span></button>
+        <button type="button" class="dv-cat"><span class="dv-cat__i" style="--c:#ffd84a"><span class="dv-cat__g">💡</span></span><span class="dv-cat__n">위클리 이슈</span></button>
+        <button type="button" class="dv-cat"><span class="dv-cat__i" style="--c:#c9b6f7"><span class="dv-cat__g">📍</span></span><span class="dv-cat__n">팝업스토어</span></button>
+        <button type="button" class="dv-cat"><span class="dv-cat__i" style="--c:#f7a8cb"><span class="dv-cat__g">💳</span></span><span class="dv-cat__n">요즘 이카드</span></button>
+        <button type="button" class="dv-cat"><span class="dv-cat__i" style="--c:#ff6a2b"><span class="dv-cat__g">D</span></span><span class="dv-cat__n">D오더</span></button>
+        <button type="button" class="dv-cat"><span class="dv-cat__i dv-cat__i--dia" style="--c:#74e6c6"><span class="dv-cat__g dv-cat__g--dia">🛒</span></span><span class="dv-cat__n">올댓쇼핑</span></button>
+        <button type="button" class="dv-cat"><span class="dv-cat__i dv-cat__i--dia" style="--c:#84b6ff"><span class="dv-cat__g dv-cat__g--dia">🧺</span></span><span class="dv-cat__n">D쇼핑</span></button>
+          </nav>
+
+          <div class="dv-feed">
+            <article class="dv-ev"><span class="dv-ev__pill">EVENT</span><h3 class="dv-ev__t"><span>디스커버 소·탐·생·활</span><span>: 파밍의 성지, 동묘</span></h3><span class="dv-ev__art" aria-hidden="true">🏪<b>🐱</b></span></article>
+        <article class="dv-card"><p class="dv-card__lab">리빙/라이프</p><h3 class="dv-card__t"><span>올 추석 장보기,</span><span>반값에 준비하세요!</span></h3><span class="dv-card__ic dv-card__ic--pic"><img alt="" data-a="dv_ic_mega"></span></article>
+        <article class="dv-card"><p class="dv-card__lab">음식/쿠킹</p><h3 class="dv-card__t"><span>참 맛있는 참외 밥상</span></h3><img class="dv-card__photo" alt="" loading="lazy" decoding="async" data-a="dv_ph_chamoe"></article>
+        <article class="dv-card"><p class="dv-card__lab">트렌드</p><h3 class="dv-card__t"><span>반려동물과의</span><span>이별을 늦출 수 있다면</span></h3><span class="dv-card__ic" aria-hidden="true">✨</span></article>
+        <article class="dv-card dv-card--dash"><p class="dv-card__lab">스페셜</p><h3 class="dv-card__t"><span>정책·축제·문화생활까지</span><span>이번 주 놓치면 아까운 정보!</span></h3><span class="dv-card__ic dv-card__ic--pic"><img alt="" data-a="dv_ic_mega"></span></article>
+        <article class="dv-card"><p class="dv-card__lab">트렌드</p><h3 class="dv-card__t"><span>지금 해외 뷰티 크리에이터들이</span><span>한국 브랜드에게 화난 이유</span></h3><span class="dv-card__ic" aria-hidden="true">✨</span></article>
+        <button type="button" class="dv-ban"><img alt="이번주엔 무슨 일이? 이번주 운세보기" loading="lazy" decoding="async" data-a="dv_ban_fortune"></button>
+        <article class="dv-card"><p class="dv-card__lab">리빙/라이프</p><h3 class="dv-card__t"><span>쉽게 따라 하는</span><span>반려견 셀프 미용</span></h3><span class="dv-card__ic" aria-hidden="true">🏠</span></article>
+        <button type="button" class="dv-ban"><img alt="쓰는 만큼 쌓이고, 필요할 땐 채워지고" loading="lazy" decoding="async" data-a="dv_ban_hipoint"></button>
+        <article class="dv-card"><p class="dv-card__lab">문화/예술</p><h3 class="dv-card__t"><span>키아프&프리즈 2026 미리보기</span></h3><span class="dv-card__ic" aria-hidden="true">🎨</span></article>
+        <article class="dv-card"><p class="dv-card__lab">리빙/라이프</p><h3 class="dv-card__t"><span>쿠마 켄고 건축과</span><span>펜타그램 브랜딩의 만남</span></h3><span class="dv-card__ic" aria-hidden="true">🏠</span></article>
+        <article class="dv-card"><p class="dv-card__lab">트렌드</p><h3 class="dv-card__t"><span>아이팟이 다시 핫해진 이유</span></h3><span class="dv-card__ic" aria-hidden="true">✨</span></article>
+        <button type="button" class="dv-ban"><img alt="우리 아이 스마트 선물, 제대로 골랐나요?" loading="lazy" decoding="async" data-a="dv_ban_gift"></button>
+        <article class="dv-card"><p class="dv-card__lab">문화/예술</p><h3 class="dv-card__t"><span>제임스 터렐이 빚어낸</span><span>감각의 파노라마</span></h3><span class="dv-card__ic" aria-hidden="true">🎨</span></article>
+        <article class="dv-card"><p class="dv-card__lab">문화/예술</p><h3 class="dv-card__t"><span>낯선 세계를 그리는</span><span>호주 일러스트레이터</span></h3><span class="dv-card__ic" aria-hidden="true">🎨</span></article>
+        <article class="dv-card"><p class="dv-card__lab">리빙/라이프</p><h3 class="dv-card__t"><span>어른과 어린이</span><span>모두 즐거운 공간</span></h3><span class="dv-card__ic" aria-hidden="true">🏠</span></article>
+        <article class="dv-quote"><p>캐나다 토론토에 어른들의 장소인 카페와 어린이들의 장소인 놀이터를 통합한 공간이 문을 열었다.</p></article>
+        <article class="dv-card"><p class="dv-card__lab">경제</p><h3 class="dv-card__t"><span>그 고래의 이름은</span><span>연기금</span></h3><span class="dv-card__ic" aria-hidden="true">💵</span></article>
+        <article class="dv-card"><p class="dv-card__lab">리빙/라이프</p><h3 class="dv-card__t"><span>가족이 함께하는</span><span>독서의 필요성</span></h3><span class="dv-card__ic" aria-hidden="true">🏠</span></article>
+        <article class="dv-card"><p class="dv-card__lab">트렌드</p><h3 class="dv-card__t"><span>키우는 재미에 먹는</span><span>재미까지</span></h3><span class="dv-card__ic" aria-hidden="true">✨</span></article>
+        <article class="dv-quote"><p>the 독자: 국민연금이 국내 주식 투자 비중 축소하고 해외주식 비중 늘린다는 뉴스가 눈에 많이 나오더라고요? 그게 그렇게 중요해요? 그래봤자 남의 투자 이야기잖아요. 어피티: 국내 증시에서 국민연금은 막강한 영향력을 행사하는 ‘큰손’…</p></article>
+        <article class="dv-quote"><p>필진 소개: 어피티 구독자 여러분 안녕하세요. 글 쓰는 보험설계사 서지은입니다. 2022년 ‘보험족보’ 시리즈로 만난 후 3년 만인데요, 그동안 보험도 많은 변화가 있었죠. 지난 시간이 보험의 입문 편이었다면 이번에는 일상에서 정말 …</p></article>
+        <article class="dv-card"><p class="dv-card__lab">취미/건강</p><h3 class="dv-card__t"><span>뷰티 디바이스</span><span>끝판왕은 누구?</span></h3><span class="dv-card__ic dv-card__ic--like" aria-hidden="true">❤️</span></article>
+        <section class="dv-sec"><h2 class="dv-sec__h"><span>황은율 님이</span><span>보고 있는 시리즈</span></h2><div class="dv-ser"><button type="button" class="dv-ser__item" data-href="index.html"><img alt="" loading="lazy" decoding="async" data-a="dv_ser_tasty"><span>[Tasty SOLution]</span></button><button type="button" class="dv-ser__item"><img alt="" loading="lazy" decoding="async" data-a="dv_ser_webtoon"><span>[웹툰, 소중한 일상의 발견]</span></button></div></section>
+        <article class="dv-card dv-card--gray"><p class="dv-card__lab">경제</p><h3 class="dv-card__t"><span>부모님이 주신 생활비,</span><span>세금을 내야 할까요?</span></h3><img class="dv-card__photo" alt="" loading="lazy" decoding="async" data-a="dv_ph_tax"></article>
+        <button type="button" class="dv-ban"><img alt="초간단 식혜 만들기" loading="lazy" decoding="async" data-a="dv_ban_sikhye"></button>
+        <section class="dv-deals"><h3 class="dv-deals__h">이번주 핫딜</h3><ul class="dv-deals__list"><li class="dv-deal"><img alt="" loading="lazy" decoding="async" data-a="dv_pd_polo"><span class="dv-deal__b"><span class="dv-deal__n">[폴로 랄프로렌] 클래식핏 데님 셔츠(MNPOWOV16820204410)</span><span class="dv-deal__p"><b>66%</b>73,900원</span></span></li><li class="dv-deal"><img alt="" loading="lazy" decoding="async" data-a="dv_pd_ck"><span class="dv-deal__b"><span class="dv-deal__n">CK 캘빈클라인 남성 스트레치 코튼 드로즈(U2662-MWO) 3종 세트</span><span class="dv-deal__p"><b>70%</b>33,900원</span></span></li><li class="dv-deal"><img alt="" loading="lazy" decoding="async" data-a="dv_pd_mk1"><span class="dv-deal__b"><span class="dv-deal__n">[메종키츠네] 로고필라 컴포트 반팔 티셔츠 PM00115KJ7025</span><span class="dv-deal__p"><b>75%</b>45,900원</span></span></li><li class="dv-deal"><img alt="" loading="lazy" decoding="async" data-a="dv_pd_mk2"><span class="dv-deal__b"><span class="dv-deal__n">[메종키츠네] 폭스 헤드 컴포트 폴로 티셔츠(PM00210KP0001)</span><span class="dv-deal__p"><b>73%</b>49,900원</span></span></li><li class="dv-deal"><img alt="" loading="lazy" decoding="async" data-a="dv_pd_apc"><span class="dv-deal__b"><span class="dv-deal__n">[아페쎄] 루마담 로고 반팔티셔츠</span><span class="dv-deal__p"><b>75%</b>43,900원</span></span></li></ul><button type="button" class="dv-deals__more">더보기</button></section>
+        <section class="dv-sec dv-sec--cp"><h2 class="dv-sec__h"><span><em>황은율</em> 님에게 드리는</span><span>쿠폰 묶음이에요</span></h2></section><div class="dv-cps"><button type="button" class="dv-cp" style="background:#006fb9"><span class="dv-cp__b">[감탄브라] 할인 쿠폰</span><span class="dv-cp__logo dv-cp__logo--txt">감탄브라</span><span class="dv-cp__v">5% 캐시백</span></button><button type="button" class="dv-cp" style="background:#b264ff"><span class="dv-cp__b">KKday(케이케이데이)</span><img class="dv-cp__logo" alt="" loading="lazy" decoding="async" data-a="dv_cp_kkday"><span class="dv-cp__v">5% 캐시백</span></button><button type="button" class="dv-cp" style="background:#010f6b"><span class="dv-cp__b">[비에날씬] 할인 쿠폰</span><img class="dv-cp__logo" alt="" loading="lazy" decoding="async" data-a="dv_cp_binalcin"><span class="dv-cp__v">50% 할인 혜택</span></button><button type="button" class="dv-cp" style="background:#6fcfbd"><span class="dv-cp__b">레드닥터</span><img class="dv-cp__logo" alt="" loading="lazy" decoding="async" data-a="dv_cp_reddr"><span class="dv-cp__v">12% 캐시백</span></button><button type="button" class="dv-cp" style="background:#e76c8a"><span class="dv-cp__b">그리팅몰</span><img class="dv-cp__logo" alt="" loading="lazy" decoding="async" data-a="dv_cp_greating"><span class="dv-cp__v">7,000원 캐시백</span></button><button type="button" class="dv-cp" style="background:#fe4437"><span class="dv-cp__b">몽베스트</span><img class="dv-cp__logo" alt="" loading="lazy" decoding="async" data-a="dv_cp_mongbest"><span class="dv-cp__v">12% 캐시백</span></button><button type="button" class="dv-cp" style="background:#2d2e2e"><span class="dv-cp__b">바잇미</span><img class="dv-cp__logo" alt="" loading="lazy" decoding="async" data-a="dv_cp_biteme"><span class="dv-cp__v">5% 캐시백</span></button><button type="button" class="dv-cp dv-cp--all"><span class="dv-cp__arrow" aria-hidden="true"></span><span class="dv-cp__allt">쿠폰묶음<br>전체 보러가기</span></button></div>
+          </div>
+
+          <button type="button" class="dv-load">
+            <span class="dv-load__s" aria-hidden="true">✨</span>
+            <span class="dv-load__t">새로운 콘텐츠 불러오기</span>
+            <i class="dv-load__c" aria-hidden="true"></i>
+          </button>
+
+          <div class="dv-tabwrap">
+            <div class="dv-tab">
+              <button type="button" class="dv-tab__b">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M10.3 21a2 2 0 0 0 3.4 0"/></svg>알림</button>
+              <button type="button" class="dv-tab__b is-on">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20.8 8.6c0-2.5-2-4.6-4.5-4.6-1.7 0-3.2.9-4 2.3-.8-1.4-2.3-2.3-4-2.3a4.55 4.55 0 0 0-4.5 4.6C3.8 14 12 19.5 12 19.5s8.8-5.5 8.8-10.9Z"/></svg>투데이</button>
+            </div>
+            <button type="button" class="dv-top" aria-label="맨 위로">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 20V5"/><path d="M5.5 11.5 12 5l6.5 6.5"/></svg>
+            </button>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+      <div class="sheet-scrim" id="sheet-scrim" hidden></div>
+      <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+        <div class="sheet__head">
+          <h2 class="sheet__title" id="sheet-title">공유하기</h2>
+          <button type="button" class="sheet__x" id="sheet-close" aria-label="공유하기 닫기"></button>
+        </div>
+        <ul class="sheet__list">
+          <li><button type="button" class="sheet__item" data-share="카카오톡">
+            <span class="sheet__ico"><span class="glyph--kakao" aria-hidden="true">TALK</span></span>카카오톡</button></li>
+          <li><button type="button" class="sheet__item" data-share="페이스북">
+            <span class="sheet__ico"><span class="glyph--fb" aria-hidden="true">f</span></span>페이스북</button></li>
+          <li><button type="button" class="sheet__item" data-share="X">
+            <span class="sheet__ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="#101828" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>X</button></li>
+          <li><button type="button" class="sheet__item" data-share="링크">
+            <span class="sheet__ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#101828" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10.1 13.9a5 5 0 0 0 7.5.5l2.7-2.7a5 5 0 0 0-7-7l-1.6 1.5"/><path d="M13.9 10.1a5 5 0 0 0-7.5-.5l-2.7 2.7a5 5 0 0 0 7 7l1.5-1.5"/></svg></span>링크 복사</button></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+  <p class="hint">디스커버 홈 — 실제 앱 화면 기준 프로토타입. <code>보고 있는 시리즈</code>의 [Tasty SOLution]을 누르면 시리즈 홈으로 이동합니다.</p>
+</div>
+
+<script src="assets/img/map.js"></script>
+<script src="app.js"></script>
+<script>
+
+document.body.classList.add('is-dark');
+
+/* 맨 위로 */
+document.querySelector('.dv-top').addEventListener('click', () => {
+  scroller.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+/* 하단 탭 — 실제 앱처럼 선택 상태만 바뀐다 */
+document.querySelectorAll('.dv-tab__b').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.dv-tab__b').forEach(x => x.classList.remove('is-on'));
+    b.classList.add('is-on');
+  });
+});
+
+/* 프로토타입 안내 토스트 */
+const HINT = {
+  '.dv-chip': '추천 콘텐츠를 다시 불러오는 기능이에요.',
+  '.dv-load': '스크롤 끝에서 다음 콘텐츠를 불러와요.',
+  '.dv-act': '내 활동(좋아요·스크랩) 화면으로 이동해요.',
+  '.dv-search': '디스커버 검색 화면으로 이동해요.',
+  '.dv-deals__more': '이번주 핫딜 전체 목록으로 이동해요.'
+};
+Object.keys(HINT).forEach(sel => {
+  document.querySelectorAll(sel).forEach(el => {
+    el.addEventListener('click', () => toast(HINT[sel]));
+  });
+});
+document.querySelectorAll('.dv-cp, .dv-cat, .dv-ban, .dv-card, .dv-quote').forEach(el => {
+  if (el.dataset.href) return;
+  el.addEventListener('click', () => toast('프로토타입에서는 이 콘텐츠까지 준비되어 있지 않아요.'));
+});
+
+relayout();
+</script>
+</body>
+</html>
