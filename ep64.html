@@ -99,7 +99,7 @@ document.getElementById('c-panels').innerHTML = Array.from({length: 13}, (_, i) 
   return `<img src="${A[k]}" ${ar(k)} loading="lazy" decoding="async" alt="겨울을 굽는 시간 크리스마스 버터 쿠키 레시피 ${i + 1}컷">`;
 }).join('');
 
-const C = [{"no": 66, "t": "향긋한 겨울의 전령사 유자 활용법", "cur": false, "go": ""}, {"no": 65, "t": "운동할 땐 간식도 건강하게!", "cur": false, "go": "ep65.html"}, {"no": 64, "t": "겨울을 굽는 시간 크리스마스 버터 쿠키 레시피", "cur": true, "go": "ep64.html"}, {"no": 63, "t": "팥 들었슈!", "cur": false, "go": ""}, {"no": 62, "t": "까먹기만 하기엔 아까워! 귤 활용 디저트 레시피", "cur": false, "go": ""}];
+const C = [{"no": 68, "t": "방 콕! 남국의 셰프", "cur": false, "go": "ep68.html"}, {"no": 65, "t": "운동할 땐 간식도 건강하게!", "cur": false, "go": "ep65.html"}, {"no": 64, "t": "겨울을 굽는 시간 크리스마스 버터 쿠키 레시피", "cur": true, "go": "ep64.html"}, {"no": 61, "t": "잼보다 더 향긋한 시나몬 사과 콩포트", "cur": false, "go": "ep61.html"}, {"no": 59, "t": "달콤한 늦가을 맛! 시나몬롤 만들기", "cur": false, "go": "ep59.html"}];
 document.getElementById('c-items').innerHTML = C.map(e => `
 <li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>

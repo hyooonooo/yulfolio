@@ -115,15 +115,9 @@ const SU_ALT = [
 document.getElementById('su-panels').innerHTML = SU_ALT
   .map((alt, i) => `<img loading="lazy" decoding="async" ${ar('x_p' + (i + 1))} src="${A['x_p' + (i + 1)]}" alt="${esc(alt)}">`).join('');
 
-const SU = [
-  {no:15, t:'마지막 살 오른 꼬막의 기특한 맛'},
-  {no:14, t:'초간단 식혜 만들기'},
-  {no:13, t:'호랑이도 반한 겨울별미, 수수부꾸미', cur:true},
-  {no:12, t:'콩으로 메주를 쑤는 것임? 두부도?'},
-  {no:11, t:'녹색 실을 닮은 갯벌의 보물'}
-];
+const SU = [{"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false, "go": "ep35.html"}, {"no": 30, "t": "여름밤, 홈메이드 막걸리와 함께", "cur": false, "go": "ep30.html"}, {"no": 19, "t": "분식 못 잃어! 다이어터를 위한 레시피", "cur": false, "go": "ep19.html"}, {"no": 13, "t": "호랑이도 반한 겨울별미, 수수부꾸미", "cur": true, "go": "ep13.html"}, {"no": 4, "t": "집에서 빙수 만들기, 이게 되네?", "cur": false, "go": "ep4.html"}];
 document.getElementById('su-items').innerHTML = SU.map(e => `
-<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>
   <span class="d-eprow__t">${esc(e.t)}</span>
   <img loading="lazy" decoding="async" ${ar('t' + e.no)} src="${A['t' + e.no]}" alt="">

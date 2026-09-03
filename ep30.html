@@ -144,15 +144,9 @@
 <script src="app.js"></script>
 <script>
 /* ---------- 막걸리 편 푸터 회차 목록 ---------- */
-const MK = [
-  {no:32, t:'간편한 여름 보양식 솥밥'},
-  {no:31, t:'여름방학, 10분 완성!'},
-  {no:30, t:'여름밤, 홈메이드 막걸리와 함께', cur:true},
-  {no:29, t:'이토록 맛있는 수수수박껍질...!'},
-  {no:28, t:'바다의 산삼, 전복으로 스태미나 100% 충전'}
-];
+const MK = [{"no": 37, "t": "무화과 어디까지 무봤나", "cur": false, "go": "ep37.html"}, {"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false, "go": "ep35.html"}, {"no": 30, "t": "여름밤, 홈메이드 막걸리와 함께", "cur": true, "go": "ep30.html"}, {"no": 19, "t": "분식 못 잃어! 다이어터를 위한 레시피", "cur": false, "go": "ep19.html"}, {"no": 13, "t": "호랑이도 반한 겨울별미, 수수부꾸미", "cur": false, "go": "ep13.html"}];
 document.getElementById('mk-items').innerHTML = MK.map(e => `
-<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>
   <span class="d-eprow__t">${esc(e.t)}</span>
   <img loading="lazy" decoding="async" ${ar('t' + e.no)} src="${A['t' + e.no]}" alt="">

@@ -101,7 +101,7 @@ document.getElementById('c-panels').innerHTML = Array.from({length: 13}, (_, i) 
   return `<img src="${A[k]}" ${ar(k)} loading="lazy" decoding="async" alt="찬바람 불 때 삿포로 수프카레 ${i + 1}컷">`;
 }).join('');
 
-const C = [{"no": 72, "t": "만들어 선물할까, 술 초콜릿", "cur": false, "go": ""}, {"no": 71, "t": "달콤한 폭탄이 팡팡, 코코아밤 만들기", "cur": false, "go": ""}, {"no": 70, "t": "찬바람 불 때 삿포로 수프카레", "cur": true, "go": "ep70.html"}, {"no": 69, "t": "한 그릇으로 가뿐하게", "cur": false, "go": ""}, {"no": 68, "t": "방 콕! 남국의 셰프", "cur": false, "go": "ep68.html"}];
+const C = [{"no": 82, "t": "몸이 산뜻해지는 봄의 사찰음식", "cur": false, "go": "ep82.html"}, {"no": 80, "t": "봄 향기 가득! 냉이 파스타", "cur": false, "go": "ep80.html"}, {"no": 70, "t": "찬바람 불 때 삿포로 수프카레", "cur": true, "go": "ep70.html"}, {"no": 68, "t": "방 콕! 남국의 셰프", "cur": false, "go": "ep68.html"}, {"no": 65, "t": "운동할 땐 간식도 건강하게!", "cur": false, "go": "ep65.html"}];
 document.getElementById('c-items').innerHTML = C.map(e => `
 <li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>

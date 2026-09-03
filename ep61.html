@@ -119,15 +119,9 @@ const CP_ALT = [
 document.getElementById('cp-panels').innerHTML = CP_ALT
   .map((alt, i) => `<img loading="lazy" decoding="async" ${ar('c_p' + (i + 1))} src="${A['c_p' + (i + 1)]}" alt="${esc(alt)}">`).join('');
 
-const CP = [
-  {no:63, t:'팥 들었슈!'},
-  {no:62, t:'까먹기만 하기엔 아까워! 귤 활용 디저트 레시피'},
-  {no:61, t:'잼보다 더 향긋한 시나몬 사과 콩포트', cur:true},
-  {no:60, t:'자연이 포개 놓은 감칠맛'},
-  {no:59, t:'달콤한 늦가을 맛! 시나몬롤 만들기'}
-];
+const CP = [{"no": 65, "t": "운동할 땐 간식도 건강하게!", "cur": false, "go": "ep65.html"}, {"no": 64, "t": "겨울을 굽는 시간 크리스마스 버터 쿠키 레시피", "cur": false, "go": "ep64.html"}, {"no": 61, "t": "잼보다 더 향긋한 시나몬 사과 콩포트", "cur": true, "go": "ep61.html"}, {"no": 59, "t": "달콤한 늦가을 맛! 시나몬롤 만들기", "cur": false, "go": "ep59.html"}, {"no": 49, "t": "걸어 다니면서 먹는 워킹 타코 꿀조합", "cur": false, "go": "ep49.html"}];
 document.getElementById('cp-items').innerHTML = CP.map(e => `
-<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>
   <span class="d-eprow__t">${esc(e.t)}</span>
   <img loading="lazy" decoding="async" ${ar('t' + e.no)} src="${A['t' + e.no]}" alt="">

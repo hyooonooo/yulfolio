@@ -100,7 +100,7 @@ document.getElementById('c-panels').innerHTML = Array.from({length: 14}, (_, i) 
   return `<img src="${A[k]}" ${ar(k)} loading="lazy" decoding="async" alt="무화과 어디까지 무봤나 ${i + 1}컷">`;
 }).join('');
 
-const C = [{"no": 39, "t": "홍합으로 만드는 맛있는 조합", "cur": false, "go": ""}, {"no": 38, "t": "정성 가득! 이색 뇨키 한 끼", "cur": false, "go": ""}, {"no": 37, "t": "무화과 어디까지 무봤나", "cur": true, "go": "ep37.html"}, {"no": 36, "t": "광어 요리, 얼마나 맛있게요?", "cur": false, "go": ""}, {"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false, "go": "ep35.html"}];
+const C = [{"no": 49, "t": "걸어 다니면서 먹는 워킹 타코 꿀조합", "cur": false, "go": "ep49.html"}, {"no": 41, "t": "참새처럼 귀여워! 매작과 만들기", "cur": false, "go": "ep41.html"}, {"no": 37, "t": "무화과 어디까지 무봤나", "cur": true, "go": "ep37.html"}, {"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false, "go": "ep35.html"}, {"no": 30, "t": "여름밤, 홈메이드 막걸리와 함께", "cur": false, "go": "ep30.html"}];
 document.getElementById('c-items').innerHTML = C.map(e => `
 <li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>

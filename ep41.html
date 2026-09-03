@@ -100,7 +100,7 @@ document.getElementById('c-panels').innerHTML = Array.from({length: 16}, (_, i) 
   return `<img src="${A[k]}" ${ar(k)} loading="lazy" decoding="async" alt="참새처럼 귀여워! 매작과 만들기 ${i + 1}컷">`;
 }).join('');
 
-const C = [{"no": 43, "t": "타우린&단백질 가득! 파스타 한 접시", "cur": false, "go": ""}, {"no": 42, "t": "담백하고 고소한 바다 한 솥", "cur": false, "go": ""}, {"no": 41, "t": "참새처럼 귀여워! 매작과 만들기", "cur": true, "go": "ep41.html"}, {"no": 40, "t": "동글동글 귀여운 만두가 퐁당", "cur": false, "go": ""}, {"no": 39, "t": "홍합으로 만드는 맛있는 조합", "cur": false, "go": ""}];
+const C = [{"no": 59, "t": "달콤한 늦가을 맛! 시나몬롤 만들기", "cur": false, "go": "ep59.html"}, {"no": 49, "t": "걸어 다니면서 먹는 워킹 타코 꿀조합", "cur": false, "go": "ep49.html"}, {"no": 41, "t": "참새처럼 귀여워! 매작과 만들기", "cur": true, "go": "ep41.html"}, {"no": 37, "t": "무화과 어디까지 무봤나", "cur": false, "go": "ep37.html"}, {"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false, "go": "ep35.html"}];
 document.getElementById('c-items').innerHTML = C.map(e => `
 <li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>

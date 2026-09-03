@@ -119,15 +119,9 @@ const PB_ALT = [
 document.getElementById('pb-panels').innerHTML = PB_ALT
   .map((alt, i) => `<img loading="lazy" decoding="async" ${ar('b_p' + (i + 1))} src="${A['b_p' + (i + 1)]}" alt="${esc(alt)}">`).join('');
 
-const PB = [
-  {no:67, t:'황금빛 샤프란과 K 감칠맛'},
-  {no:66, t:'향긋한 겨울의 전령사 유자 활용법'},
-  {no:65, t:'운동할 땐 간식도 건강하게!', cur:true},
-  {no:64, t:'겨울을 굽는 시간 크리스마스 버터 쿠키 레시피'},
-  {no:63, t:'팥 들었슈!'}
-];
+const PB = [{"no": 70, "t": "찬바람 불 때 삿포로 수프카레", "cur": false, "go": "ep70.html"}, {"no": 68, "t": "방 콕! 남국의 셰프", "cur": false, "go": "ep68.html"}, {"no": 65, "t": "운동할 땐 간식도 건강하게!", "cur": true, "go": "ep65.html"}, {"no": 64, "t": "겨울을 굽는 시간 크리스마스 버터 쿠키 레시피", "cur": false, "go": "ep64.html"}, {"no": 61, "t": "잼보다 더 향긋한 시나몬 사과 콩포트", "cur": false, "go": "ep61.html"}];
 document.getElementById('pb-items').innerHTML = PB.map(e => `
-<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>
   <span class="d-eprow__t">${esc(e.t)}</span>
   <img loading="lazy" decoding="async" ${ar('t' + e.no)} src="${A['t' + e.no]}" alt="">

@@ -120,15 +120,9 @@ const KT_ALT = [
 document.getElementById('kt-panels').innerHTML = KT_ALT
   .map((alt, i) => `<img loading="lazy" decoding="async" ${ar('k_p' + (i + 1))} src="${A['k_p' + (i + 1)]}" alt="${esc(alt)}">`).join('');
 
-const KT = [
-  {no:21, t:'꽃게가 활짝 피었습니다'},
-  {no:20, t:'집에서 즐기는 만찬!'},
-  {no:19, t:'분식 못 잃어! 다이어터를 위한 레시피', cur:true},
-  {no:18, t:'내돈내만 이유식!'},
-  {no:17, t:'보약 대신 챙기는 봄 주꾸미'}
-];
+const KT = [{"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false, "go": "ep35.html"}, {"no": 30, "t": "여름밤, 홈메이드 막걸리와 함께", "cur": false, "go": "ep30.html"}, {"no": 19, "t": "분식 못 잃어! 다이어터를 위한 레시피", "cur": true, "go": "ep19.html"}, {"no": 13, "t": "호랑이도 반한 겨울별미, 수수부꾸미", "cur": false, "go": "ep13.html"}, {"no": 4, "t": "집에서 빙수 만들기, 이게 되네?", "cur": false, "go": "ep4.html"}];
 document.getElementById('kt-items').innerHTML = KT.map(e => `
-<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>
   <span class="d-eprow__t">${esc(e.t)}</span>
   <img loading="lazy" decoding="async" ${ar('t' + e.no)} src="${A['t' + e.no]}" alt="">

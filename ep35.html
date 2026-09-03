@@ -100,7 +100,7 @@ document.getElementById('c-panels').innerHTML = Array.from({length: 16}, (_, i) 
   return `<img src="${A[k]}" ${ar(k)} loading="lazy" decoding="async" alt="달디달고 다디단 밤 디저트 ${i + 1}컷">`;
 }).join('');
 
-const C = [{"no": 37, "t": "무화과 어디까지 무봤나", "cur": false, "go": "ep37.html"}, {"no": 36, "t": "광어 요리, 얼마나 맛있게요?", "cur": false, "go": ""}, {"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": true, "go": "ep35.html"}, {"no": 34, "t": "자기 관리 끝판왕의 식단 따라잡기", "cur": false, "go": ""}, {"no": 33, "t": "올라, 에스파냐! 지중해의 낭만 타파스", "cur": false, "go": ""}];
+const C = [{"no": 41, "t": "참새처럼 귀여워! 매작과 만들기", "cur": false, "go": "ep41.html"}, {"no": 37, "t": "무화과 어디까지 무봤나", "cur": false, "go": "ep37.html"}, {"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": true, "go": "ep35.html"}, {"no": 30, "t": "여름밤, 홈메이드 막걸리와 함께", "cur": false, "go": "ep30.html"}, {"no": 19, "t": "분식 못 잃어! 다이어터를 위한 레시피", "cur": false, "go": "ep19.html"}];
 document.getElementById('c-items').innerHTML = C.map(e => `
 <li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>

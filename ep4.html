@@ -181,19 +181,13 @@ document.getElementById('d-recipes').innerHTML = R.map((r, i) => {
 }).join('');
 
 /* ---------- 푸터 회차 목록 ---------- */
-const S2 = [
-  {no:6, t:'건강 관리도 즐겁게, 헬시 플레저 레시피', a:'ep6'},
-  {no:5, t:'여름엔 연잎! 다 이유가 있다',           a:'ep5'},
-  {no:4, t:'집에서 빙수 만들기, 이게 되네?',        a:'ep4', cur:true},
-  {no:3, t:'조선 실학자들의 간식보감',              a:'ep3'},
-  {no:2, t:'혼자서도 맛있게',                      a:'ep2'}
-];
+const S2 = [{"no": 35, "t": "달디달고 다디단 밤 디저트", "cur": false, "go": "ep35.html"}, {"no": 30, "t": "여름밤, 홈메이드 막걸리와 함께", "cur": false, "go": "ep30.html"}, {"no": 19, "t": "분식 못 잃어! 다이어터를 위한 레시피", "cur": false, "go": "ep19.html"}, {"no": 13, "t": "호랑이도 반한 겨울별미, 수수부꾸미", "cur": false, "go": "ep13.html"}, {"no": 4, "t": "집에서 빙수 만들기, 이게 되네?", "cur": true, "go": "ep4.html"}];
 
 document.getElementById('d-items').innerHTML = S2.map(e => `
-<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''}${e.go && !e.cur ? ` data-href="${e.go}"` : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
   <span class="d-eprow__no">${e.no}</span>
   <span class="d-eprow__t">${esc(e.t)}</span>
-  <img loading="lazy" decoding="async" ${ar(e.a)} src="${A[e.a]}" alt="">
+  <img loading="lazy" decoding="async" ${ar('t' + e.no)} src="${A['t' + e.no]}" alt="">
 </button></li>`).join('');
 
 /* ---------- 반응 ---------- */
