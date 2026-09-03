@@ -75,6 +75,10 @@
           </button>
 
           <div class="dv-tabwrap">
+            <div class="dv-cta" id="dv-cta" role="status" aria-live="polite">
+              <p class="dv-cta__t">프로토타입에서는 이 콘텐츠까지 준비되어 있지 않아요.</p>
+              <button type="button" class="dv-cta__b">[Tasty SOLution] 보러 가기<i aria-hidden="true"></i></button>
+            </div>
             <div class="dv-tab">
               <button type="button" class="dv-tab__b">
                 <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -155,9 +159,26 @@ Object.keys(HINT).forEach(sel => {
     el.addEventListener('click', () => toast(HINT[sel]));
   });
 });
-document.querySelectorAll('.dv-cp, .dv-cat, .dv-ban, .dv-card, .dv-quote').forEach(el => {
+/* 준비되지 않은 콘텐츠 — 라운드 토스트 + [Tasty SOLution]로 올려주는 CTA */
+const cta = document.getElementById('dv-cta');
+const ctaBtn = cta.querySelector('.dv-cta__b');
+let ctaTimer;
+function ctaShow() {
+  cta.classList.add('is-on');
+  clearTimeout(ctaTimer);
+  ctaTimer = setTimeout(() => cta.classList.remove('is-on'), 4600);
+}
+function ctaHide() { clearTimeout(ctaTimer); cta.classList.remove('is-on'); }
+ctaBtn.addEventListener('click', () => {
+  ctaHide();
+  const sec = document.querySelector('.dv-sec');
+  const top = scroller.scrollTop + sec.getBoundingClientRect().top
+              - scroller.getBoundingClientRect().top - 58;
+  scroller.scrollTo({top: Math.max(0, top), behavior: 'smooth'});
+});
+document.querySelectorAll('.dv-cp, .dv-ban, .dv-card, .dv-quote, .dv-ev').forEach(el => {
   if (el.dataset.href) return;
-  el.addEventListener('click', () => toast('프로토타입에서는 이 콘텐츠까지 준비되어 있지 않아요.'));
+  el.addEventListener('click', ctaShow);
 });
 
 relayout();

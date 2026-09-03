@@ -610,6 +610,22 @@ body.is-dark .phone__home{background:rgba(255,255,255,.55)}
   border:solid #cfd4dd;border-width:1.8px 1.8px 0 0;transform:rotate(45deg)}
 .dv-load:active{opacity:.6}
 
+/* ---- 준비 중 안내 CTA 토스트 ---- */
+.dv-cta{position:absolute;left:50%;bottom:104px;width:326px;z-index:2;
+  padding:16px 18px 14px;border-radius:18px;background:rgba(41,47,60,.96);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  box-shadow:0 12px 32px rgba(0,0,0,.5);
+  opacity:0;transform:translate(-50%,10px);pointer-events:none;
+  transition:opacity .24s ease,transform .24s ease}
+.dv-cta.is-on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.dv-cta__t{font-size:14px;line-height:1.5;color:#e9ecf2;text-align:center;letter-spacing:-.01em;
+  word-break:keep-all}
+.dv .dv-cta__b{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;height:40px;
+  margin-top:13px;border-radius:100px;background:#fff;color:#101828;font-size:14px;font-weight:700}
+.dv .dv-cta__b i{width:6px;height:6px;border:solid #101828;border-width:2px 2px 0 0;
+  transform:rotate(45deg);margin-top:1px}
+.dv .dv-cta__b:active{background:#e7e9ef}
+
 /* ---- 하단 플로팅 바 ---- */
 .dv-tabwrap{position:sticky;bottom:0;z-index:30;display:flex;align-items:center;
   justify-content:center;height:126px;margin-top:-56px;pointer-events:none}
