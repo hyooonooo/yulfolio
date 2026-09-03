@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13화 호랑이도 반한 겨울별미, 수수부꾸미 — [Tasty SOLution]</title>
+<meta name="description" content="신한 SOL pay [Tasty SOLution] 콘텐츠 프로토타입">
+<link rel="preload" href="assets/fonts/p700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage">
+  <div class="phone">
+    <span class="phone__btn phone__btn--silent" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--volup" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--voldown" aria-hidden="true"></span>
+    <span class="phone__btn phone__btn--power" aria-hidden="true"></span>
+
+    <div class="phone__screen">
+      <span class="phone__notch" aria-hidden="true"></span>
+      <span class="phone__home" aria-hidden="true"></span>
+
+      <div class="scroll" id="scroller">
+        <!-- ============ SCREEN 5 : 호랑이도 반한 겨울별미, 수수부꾸미 ============ -->
+        <main class="screen d is-active" id="screen-susu" aria-label="호랑이도 반한 겨울별미, 수수부꾸미 상세 화면" tabindex="-1">
+          <header class="appbar" data-appbar>
+            <div class="navbar d-nav">
+              <button type="button" class="d-navbtn" aria-label="시리즈 목록으로 돌아가기" data-href="index.html"><img alt="" data-a="s2_arrow_d"></button>
+              <button type="button" class="d-navbtn" aria-label="공유하기"><img alt="" data-a="s2_share_d"></button>
+            </div>
+          </header>
+
+          <div class="kt-hero kt-hero--susu" data-hero><img alt="수수부꾸미를 든 호랑이" data-a="x_hero"></div>
+
+          <div class="d-intro kt-intro">
+            <span class="badge"><span class="badge__star"><img alt="" data-a="s2_star1"></span>시리즈</span>
+            <h1 class="d-title">호랑이도 반한 겨울별미,<br>수수부꾸미</h1>
+            <p class="d-sub">달콤하고 쫀득한 수수부꾸미 만들기</p>
+          </div>
+
+          <div class="kt-panels" id="su-panels"></div>
+
+          <p class="d-date kt-date">작성일 2024년 2월</p>
+          <div class="d-band"></div>
+
+          <div class="d-series">
+            <span class="badge"><span class="badge__star"><img alt="" data-a="s2_star1"></span>시리즈</span>
+            <p class="d-series__title">[Tasty SOLution]</p>
+            <p class="d-series__desc">간단하지만 특별한, 일상 속에서 즐길 수 있는 센스 있는 레시피를 알려드려요.</p>
+          </div>
+
+          <section class="d-eplist" aria-labelledby="su-count">
+            <div class="d-eplist__head">
+              <p class="d-eplist__count" id="su-count">총 106화</p>
+              <button type="button" class="d-eplist__all" data-href="index.html">전체보기<span class="d-chev" aria-hidden="true"></span></button>
+            </div>
+            <div class="d-rule"></div>
+            <ul class="d-eplist__items" id="su-items"></ul>
+            <div class="d-expandwrap"><button type="button" class="d-expand" id="su-expand" aria-expanded="false"><span class="d-plus" aria-hidden="true"></span>펼쳐보기</button></div>
+          </section>
+
+          <div class="d-toolbar">
+            <button type="button" class="d-tool" aria-label="좋아요"><img alt="" data-a="s2_heart_d"></button>
+            <button type="button" class="d-tool" aria-label="저장하기"><img alt="" data-a="s2_bookmark_d"></button>
+          </div>
+        </main>
+
+
+      </div>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+      <div class="sheet-scrim" id="sheet-scrim" hidden></div>
+      <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+        <div class="sheet__head">
+          <h2 class="sheet__title" id="sheet-title">공유하기</h2>
+          <button type="button" class="sheet__x" id="sheet-close" aria-label="공유하기 닫기"></button>
+        </div>
+        <ul class="sheet__list">
+          <li><button type="button" class="sheet__item" data-share="카카오톡">
+            <span class="sheet__ico"><span class="glyph--kakao" aria-hidden="true">TALK</span></span>카카오톡</button></li>
+          <li><button type="button" class="sheet__item" data-share="페이스북">
+            <span class="sheet__ico"><span class="glyph--fb" aria-hidden="true">f</span></span>페이스북</button></li>
+          <li><button type="button" class="sheet__item" data-share="X">
+            <span class="sheet__ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="#101828" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>X</button></li>
+          <li><button type="button" class="sheet__item" data-share="링크">
+            <span class="sheet__ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#101828" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10.1 13.9a5 5 0 0 0 7.5.5l2.7-2.7a5 5 0 0 0-7-7l-1.6 1.5"/><path d="M13.9 10.1a5 5 0 0 0-7.5-.5l-2.7 2.7a5 5 0 0 0 7 7l1.5-1.5"/></svg></span>링크 복사</button></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+</div>
+
+<script src="assets/img/map.js"></script>
+<script src="app.js"></script>
+<script>
+/* ---------- 수수부꾸미 편 패널 · 회차 목록 ---------- */
+const SU_ALT = [
+  '배가 고픈 호랑이, 마을로 내려가 볼까?',
+  '어흥!! 떡 하나 주면 안 잡아먹지~!!',
+  '호호… 먹을 복이 있는 호랑이구만',
+  '달콤한 팥앙금과 쫄깃한 반죽, 근데 떡 맞아요??',
+  '찰수수가루와 찹쌀가루로 반죽해 기름에 지진 떡',
+  '수수부꾸미 재료',
+  '찰수수가루와 찹쌀가루, 물을 섞어 반죽한다',
+  '반죽에 소금과 설탕을 취향껏 넣는다',
+  '반죽을 떼어 동그랗게 뭉친다',
+  '올리브유를 두른 팬에 올리고 납작하게 누른다',
+  '어느 정도 익으면 팥앙금을 올려 반달 모양으로 접는다',
+  '수수부꾸미 완성!',
+  '달달하고 쫀득해서 계속 들어가네!'
+];
+document.getElementById('su-panels').innerHTML = SU_ALT
+  .map((alt, i) => `<img loading="lazy" decoding="async" ${ar('x_p' + (i + 1))} src="${A['x_p' + (i + 1)]}" alt="${esc(alt)}">`).join('');
+
+const SU = [
+  {no:15, t:'마지막 살 오른 꼬막의 기특한 맛'},
+  {no:14, t:'초간단 식혜 만들기'},
+  {no:13, t:'호랑이도 반한 겨울별미, 수수부꾸미', cur:true},
+  {no:12, t:'콩으로 메주를 쑤는 것임? 두부도?'},
+  {no:11, t:'녹색 실을 닮은 갯벌의 보물'}
+];
+document.getElementById('su-items').innerHTML = SU.map(e => `
+<li><button type="button" class="d-eprow"${e.cur ? ' aria-current="true"' : ''} aria-label="${e.no}화 ${esc(e.t)}${e.cur ? ' (현재 보는 화)' : ''}">
+  <span class="d-eprow__no">${e.no}</span>
+  <span class="d-eprow__t">${esc(e.t)}</span>
+  <img loading="lazy" decoding="async" ${ar('t' + e.no)} src="${A['t' + e.no]}" alt="">
+</button></li>`).join('');
+
+document.getElementById('su-expand').addEventListener('click', ev => {
+  const on = ev.currentTarget.getAttribute('aria-expanded') === 'true';
+  ev.currentTarget.setAttribute('aria-expanded', String(!on));
+  ev.currentTarget.lastChild.textContent = on ? '펼쳐보기' : '접기';
+  ev.currentTarget.querySelector('.d-plus').classList.toggle('is-minus', !on);
+});
+
+
+relayout();
+</script>
+</body>
+</html>
