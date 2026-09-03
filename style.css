@@ -504,18 +504,6 @@ body.is-dark .phone__home{background:rgba(255,255,255,.55)}
 .dv-chip__s{font-size:17px;filter:hue-rotate(-8deg)}
 .dv-chip:active{opacity:.7}
 
-/* ---- 카테고리 원형 아이콘 ---- */
-.dv-cats{display:flex;gap:22px;padding:16px 32px 6px;overflow-x:auto;scrollbar-width:none}
-.dv-cats::-webkit-scrollbar{display:none}
-.dv-cat{flex:none;width:74px;display:flex;flex-direction:column;align-items:center;gap:12px}
-.dv-cat:active{opacity:.6}
-.dv-cat__i{width:66px;height:66px;border-radius:50%;background:var(--c);display:grid;
-  place-items:center;box-shadow:0 0 22px -2px color-mix(in srgb,var(--c) 65%,transparent)}
-.dv-cat__i--dia{border-radius:16px;transform:rotate(45deg);width:60px;height:60px}
-.dv-cat__g{font-size:27px;line-height:1}
-.dv-cat__g--dia{transform:rotate(-45deg)}
-.dv-cat__n{font-size:13px;color:#e7e9ee;text-align:center;white-space:nowrap}
-
 /* ---- 피드 ---- */
 .dv-feed{display:flex;flex-direction:column;gap:12px;padding:19px 32px 0}
 .dv-card{position:relative;min-height:142px;padding:28px 20px 0 24px;border-radius:20px;
@@ -560,10 +548,18 @@ body.is-dark .phone__home{background:rgba(255,255,255,.55)}
 .dv-sec__h span{display:block}
 .dv-sec__h em{font-style:normal;color:#5f9dff}
 
-.dv-ser{display:flex;gap:7px;padding:23px 0 0;margin-left:-9px}
-.dv-ser__item{flex:none;width:80px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.dv-ser{display:flex;gap:7px;padding:56px 0 0;margin-left:-9px}
+.dv-ser__item{position:relative;flex:none;width:80px;display:flex;flex-direction:column;align-items:center;gap:22px}
 .dv-ser__item:active{opacity:.6}
 .dv-ser__item img{width:80px;height:80px;border-radius:50%}
+.dv-ser__item .dv-tip{position:absolute;left:50%;bottom:calc(100% + 10px);z-index:2;padding:7px 14px;
+  border-radius:100px;background:#fff;color:#101828;font-size:13px;font-weight:700;line-height:1.2;
+  white-space:nowrap;box-shadow:0 6px 16px rgba(0,0,0,.45);
+  animation:dvbob 1.7s ease-in-out infinite}
+.dv-ser__item .dv-tip::after{content:"";position:absolute;left:50%;top:100%;margin-left:-6px;
+  border:6px solid transparent;border-top-color:#fff}
+@keyframes dvbob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-7px)}}
+@media (prefers-reduced-motion:reduce){.dv-ser__item .dv-tip{animation:none}}
 .dv-ser__item span{font-size:12px;line-height:20px;color:#e7e9ee;text-align:center;
   word-break:break-all}
 
